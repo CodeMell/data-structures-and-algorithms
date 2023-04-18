@@ -156,7 +156,12 @@ const fizzbuzz = (arr) => {
   // Solution code here...
   let a = [];
   arr.forEach(element =>{
-    if(element %! 3 && element %! 5) {
+    if (element % 15) {
+      element = "Fizz Buzz";
+      a.push(element);
+    }
+    //if(element %! 15) 
+    else{
      a.push(element);
    }
     if(element % 3){
@@ -165,10 +170,8 @@ const fizzbuzz = (arr) => {
     }if(element % 5){
       element = "Buzz";
       a.push(element);
-    }if (element % 3 && element % 5) {
-      element = "Fizz Buzz";
-      a.push(element);
     }
+    
   })
   return a;
 };
@@ -224,7 +227,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
