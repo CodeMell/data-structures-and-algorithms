@@ -13,6 +13,12 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
+  let a = [];
+  people.forEach(element => {
+    element = element.firstName +" "+ element.lastName;
+    a.push(element);   
+  });
+  return a;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,6 +30,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  let initialValue = 0;
+  return arr.reduce((accumulator, currentValue) => accumulator + currentValue,initialValue);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,6 +48,14 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+let a = [];
+let initialValue = 0;
+arr.forEach(element => {
+  element = element.purchasePrice;
+  a.push(element);
+});
+return a.reduce((accumulator, currentValue) => accumulator + currentValue,initialValue);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +68,8 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  let initialValue = 0;
+  return arr.reduce((accumulator) => accumulator + 1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +130,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  let a = [];
+  arr.forEach(element => {
+    element = element.name;
+    a.push(element);   
+  });
+  return a;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,6 +148,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let splitString = str.split("");
+  let reversedStr = splitString.reverse();
+  let joinStr = reversedStr.join("");
+  return joinStr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -177,6 +205,8 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  let a =[];
+  arr.forEach
 };
 
 /* ------------------------------------------------------------------------------------------------
