@@ -87,6 +87,9 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  let a = {yearBorn: year}
+ let b = Object.assign(obj,a);
+return b;
 };
 
 /* ------------------------------------------------------------------------------------------------
