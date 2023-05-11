@@ -9,6 +9,9 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
+  let splitStr = str.split('');
+  let spliceStr = splitStr.splice(-10);
+  return spliceStr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,6 +30,14 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  for (let a = 0; a < matrix.length; a++) {
+
+    for (let b = 0; b < matrix[a].length; b++) {
+      if (matrix[a][b] > matrix[a][b - 1]) {
+        return matrix[a][b];
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +56,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let sum = 0;
+  matrix.forEach((row) => {
+    row.forEach((element) => {
+      sum += element;
+    });
+  });
+  return sum;
 };
 
 
@@ -72,7 +90,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  let TPH = [];
+  for (let hour = 0; hour < hoursOpen.length; hour++) {
+    let hourlyTotal = 0;
+    for (let store = 0; store < stores.length; store++) {
+      hourlyTotal += stores[store][hour];
+    }
+    TPH.push(hourlyTotal);
+  }
+  return TPH;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,6 +113,12 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let a = [];
+  hours.forEach((element, index) => {
+    let b = { sales: `${data[index]} cookies`, time: element };
+    a.push(b);
+  });
+  return a;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +144,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
