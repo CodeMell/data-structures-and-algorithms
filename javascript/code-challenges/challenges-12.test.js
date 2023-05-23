@@ -8,6 +8,7 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
+  return string.replace(/0/gi, 'zero');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +21,12 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
+  let s = pin.toString();
+  if(s.length === 4 && pin != 'abcd'){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +39,7 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   // Solution code here...
+return /^[a-zA-Z]{5,10}$/.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +52,12 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let s = string.toString();
+if(/\d/.test(s) === true && /^[0-9].*$/.test(s) === false){
+  return true;
+}else{
+  return false;
+}
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +78,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,6 +104,7 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
