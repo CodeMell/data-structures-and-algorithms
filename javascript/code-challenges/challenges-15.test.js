@@ -12,7 +12,7 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 const screenForNames = (arr) => {
   // Solution code here...
-  let regex = /^(Mr\.|Mrs\.|Ms\.|Dr\.)  [A-Za-z ]+$/;
+  let regex = /^(Mr\.|Mrs\.|Ms\.|Dr\.)\s[A-Za-z]+$/;
   let filteredArray = arr.filter(str => regex.test(str));
   return filteredArray;
 }
