@@ -12,7 +12,7 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 const screenForNames = (arr) => {
   // Solution code here...
-  let regex = /^(Mr\.|Mrs\.|Ms\.|Dr\.) [A-Za-z ]+$/;
+  let regex = /^(Mr\.|Mrs\.|Ms\.|Dr\.)  [A-Za-z ]+$/;
   let filteredArray = arr.filter(str => regex.test(str));
   return filteredArray;
 }
@@ -250,6 +250,7 @@ describe('Testing challenge 2', () => {
 describe('Testing challenge 3', () => {
   test('It should return only characters that are bigger than Luke', () => {
     expect(biggerThanLuke(starWarsData)).toStrictEqual('Darth Vader - Pex Kylar');
+    
     expect(biggerThanLuke([])).toStrictEqual('');
   });
 });
