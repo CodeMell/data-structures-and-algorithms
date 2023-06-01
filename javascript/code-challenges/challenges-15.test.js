@@ -105,18 +105,19 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
-  let lukeMass = parseInt(starWarsData[0].mass);
-  let biggerCharacters = [];
+  if (!arr || arr.length === 0) {
+    return '';
+  }
+  const lukeMass = parseInt(arr[0].mass);
+  const biggerCharacters = [];
 
-  starWarsData.slice(1).forEach((character) => {
-    let characterMass = parseInt(character.mass);
-
-    if (characterMass > lukeMass) {
+  arr.forEach((character) => {
+    if (character.mass && parseInt(character.mass) > lukeMass) {
       biggerCharacters.push(character.name);
     }
   });
 
-  return biggerCharacters.join(" - ");
+  return biggerCharacters.join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
